@@ -1,0 +1,355 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 12,
+    "passes": 2,
+    "pending": 0,
+    "failures": 10,
+    "start": "2025-01-30T08:40:44.598Z",
+    "end": "2025-01-30T08:41:38.714Z",
+    "duration": 54116,
+    "testsRegistered": 12,
+    "passPercent": 16.666666666666664,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5a37d587-f4b6-4d6c-aa6d-e675c2ace037",
+      "title": "",
+      "fullFile": "cypress/e2e/spec.cy.js",
+      "file": "cypress/e2e/spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0be1803e-e517-41d4-9626-2dba0225905a",
+          "title": "Expense Tracker Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should load the home page correctly",
+              "fullTitle": "Expense Tracker Tests should load the home page correctly",
+              "timedOut": null,
+              "duration": 9779,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Expense Tracker'); // Check if the heading is present\ncy.get('h1').should('have.text', 'Expense Tracker');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-center.text-md-start.style_heading__VIgdl>, 5 more... ]' to have text 'Expense Tracker', but the text was 'Expense TrackerWallet Balance:₹5000Expenses:₹0Recent TransactionsNo transactions!Top Expenses'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-center.text-md-start.style_heading__VIgdl>, 5 more... ]' to have text 'Expense Tracker', but the text was 'Expense TrackerWallet Balance:₹5000Expenses:₹0Recent TransactionsNo transactions!Top Expenses'\n    at Context.eval (webpack://expense_tracker/./cypress/e2e/spec.cy.js:9:15)",
+                "diff": "- 'Expense TrackerWallet Balance:₹5000Expenses:₹0Recent TransactionsNo transactions!Top Expenses'\n+ 'Expense Tracker'\n"
+              },
+              "uuid": "5d2f1f7b-38f2-4171-adc2-cde8b53eae90",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display wallet balance and expenses cards",
+              "fullTitle": "Expense Tracker Tests should display wallet balance and expenses cards",
+              "timedOut": null,
+              "duration": 527,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Wallet Balance'); // Check Wallet Balance card is present\ncy.contains('Expenses'); // Check Expenses card is present",
+              "err": {},
+              "uuid": "fe10a5f3-0da2-4ebf-b455-8a15ba902bd3",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should have a visible header with correct text",
+              "fullTitle": "Expense Tracker Tests should have a visible header with correct text",
+              "timedOut": null,
+              "duration": 4581,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Check if the header exists and contains the correct text\ncy.get('h1').should('be.visible').and('have.text', 'Expense Tracker');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-center.text-md-start.style_heading__VIgdl>, 5 more... ]' to have text 'Expense Tracker', but the text was 'Expense TrackerWallet Balance:₹5000Expenses:₹0Recent TransactionsNo transactions!Top Expenses'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-center.text-md-start.style_heading__VIgdl>, 5 more... ]' to have text 'Expense Tracker', but the text was 'Expense TrackerWallet Balance:₹5000Expenses:₹0Recent TransactionsNo transactions!Top Expenses'\n    at Context.eval (webpack://expense_tracker/./cypress/e2e/spec.cy.js:19:38)",
+                "diff": "- 'Expense TrackerWallet Balance:₹5000Expenses:₹0Recent TransactionsNo transactions!Top Expenses'\n+ 'Expense Tracker'\n"
+              },
+              "uuid": "e9c52579-f158-4816-ab45-58547f590616",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should have a button to add income and it should be styled correctly",
+              "fullTitle": "Expense Tracker Tests should have a button to add income and it should be styled correctly",
+              "timedOut": null,
+              "duration": 4795,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Check if the Add Income button is present\ncy.contains('+ Add Income').should('be.visible');\n// Check if the button is enabled and clickable\ncy.get('button').contains('+ Add Income').should('not.be.disabled').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Income' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Income' but never did.\n    at Context.eval (webpack://expense_tracker/./cypress/e2e/spec.cy.js:24:32)",
+                "diff": null
+              },
+              "uuid": "6edd91b7-4fc8-4ab6-8fa1-c2604875a238",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should be responsive for mobile view",
+              "fullTitle": "Expense Tracker Tests should be responsive for mobile view",
+              "timedOut": null,
+              "duration": 4613,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Check mobile view (iPhone 6)\ncy.viewport('iphone-6');\n// Ensure key elements are visible in mobile view\ncy.get('h1').should('be.visible');\ncy.contains('+ Add Income').should('be.visible');\ncy.contains('+ Add Expense').should('be.visible');\ncy.contains('Wallet Balance').should('be.visible');\ncy.contains('Expenses').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Income' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Income' but never did.\n    at Context.eval (webpack://expense_tracker/./cypress/e2e/spec.cy.js:35:32)",
+                "diff": null
+              },
+              "uuid": "f0e7b1eb-4f96-4586-a712-69e532024bb5",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Loads the homepage correctly",
+              "fullTitle": "Expense Tracker Tests Loads the homepage correctly",
+              "timedOut": null,
+              "duration": 357,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Check if the title is displayed\ncy.contains('h1', 'Expense Tracker').should('exist');\n// Check if cards are rendered\ncy.contains('Wallet Balance').should('exist');\ncy.contains('Expenses').should('exist');",
+              "err": {},
+              "uuid": "3fa4cf05-4766-4f66-af2d-cddc17e02335",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adds an income successfully",
+              "fullTitle": "Expense Tracker Tests Adds an income successfully",
+              "timedOut": null,
+              "duration": 4744,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Open Add Income modal\ncy.contains('+ Add Income').click();\n// Fill the form and submit\ncy.get('input[type=\"number\"][placeholder=\"Income Amount\"]').type('2000');\ncy.get('button[type=\"submit\"]').contains('Add Balance').click();\n// Verify that balance is updated\ncy.contains('Wallet Balance').parent().contains('7000'); // Adjust based on initial state",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Income' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Income' but never did.\n    at Context.eval (webpack://expense_tracker/./cypress/e2e/spec.cy.js:54:7)",
+                "diff": null
+              },
+              "uuid": "89d40426-4f95-4e80-afa7-2bfbdcb4f557",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Displays added expense in the transaction list",
+              "fullTitle": "Expense Tracker Tests Displays added expense in the transaction list",
+              "timedOut": null,
+              "duration": 4670,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Open Add Expense modal\ncy.contains('+ Add Expense').click();\n// Fill the form and submit\ncy.get('input[name=\"title\"]').type('Dinner'); // Targeting the title input\ncy.get('input[name=\"price\"]').type('500'); // Targeting the price input\ncy.get('select[name=\"category\"]').select('Food'); // Select category\ncy.get('input[name=\"date\"]').type('2024-12-18'); // Add date (ensure format matches your app)\ncy.get('button[type=\"submit\"]').contains('Add Expense').click();\n// Verify that the transaction is added to the list\ncy.contains('Transactions').should('exist'); // Ensure the Transactions section is present\ncy.contains('Dinner').should('exist'); // Verify that the 'Dinner' transaction appears in the list\ncy.contains('500').should('exist'); // Verify that the amount '500' is displayed in the transaction list\n// for second \ncy.contains('+ Add Expense').click();\n// Fill the form and submit\ncy.get('input[name=\"title\"]').type('Movie Night');\ncy.get('input[name=\"price\"]').type('300');\ncy.get('select[name=\"category\"]').select('Entertainment');\ncy.get('input[name=\"date\"]').type('2024-12-19');\ncy.get('button[type=\"submit\"]').contains('Add Expense').click();\n// Verify that the transaction is added to the list\ncy.contains('Transactions').should('exist'); // Ensure the Transactions section is present\ncy.contains('Movie Night').should('exist'); // Verify that the 'Dinner' transaction appears in the list\ncy.contains('300').should('exist'); // Verify that the amount '500' is displayed in the transaction list\ncy.contains('Wallet Balance').parent().contains('4200'); // Adjust based on initial state",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Expense' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Expense' but never did.\n    at Context.eval (webpack://expense_tracker/./cypress/e2e/spec.cy.js:66:7)",
+                "diff": null
+              },
+              "uuid": "c979aee7-38b3-49bb-be7d-45e22f19eff5",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Displays added food and travel expenses in the transaction list",
+              "fullTitle": "Expense Tracker Tests Displays added food and travel expenses in the transaction list",
+              "timedOut": null,
+              "duration": 4596,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Add Food Expense\ncy.contains('+ Add Expense').click();\ncy.get('input[name=\"title\"]').type('Lunch');\ncy.get('input[name=\"price\"]').type('200');\ncy.get('select[name=\"category\"]').select('Food');\ncy.get('input[name=\"date\"]').type('2024-12-18');\ncy.get('button[type=\"submit\"]').contains('Add Expense').click();\n// Verify that the Food expense is added\ncy.contains('Transactions').should('exist');\ncy.contains('Lunch').should('exist');\ncy.contains('200').should('exist');\n// Add Travel Expense\ncy.contains('+ Add Expense').click();\ncy.get('input[name=\"title\"]').type('Flight');\ncy.get('input[name=\"price\"]').type('1200');\ncy.get('select[name=\"category\"]').select('Travel');\ncy.get('input[name=\"date\"]').type('2024-12-19');\ncy.get('button[type=\"submit\"]').contains('Add Expense').click();\n// Verify that the Travel expense is added and the updated balance\ncy.contains('Transactions').should('exist');\ncy.contains('Flight').should('exist');\ncy.contains('1200').should('exist');\ncy.contains('Wallet Balance').parent().contains('3600'); // Adjust based on initial state",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Expense' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Expense' but never did.\n    at Context.eval (webpack://expense_tracker/./cypress/e2e/spec.cy.js:101:7)",
+                "diff": null
+              },
+              "uuid": "b8eef137-b733-4697-bdb5-361eb87d8dc9",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Displays added travel and entertainment expenses in the transaction list",
+              "fullTitle": "Expense Tracker Tests Displays added travel and entertainment expenses in the transaction list",
+              "timedOut": null,
+              "duration": 5106,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Add Travel Expense\ncy.contains('+ Add Expense').click();\ncy.get('input[name=\"title\"]').type('Hotel Stay');\ncy.get('input[name=\"price\"]').type('1500');\ncy.get('select[name=\"category\"]').select('Travel');\ncy.get('input[name=\"date\"]').type('2024-12-20');\ncy.get('button[type=\"submit\"]').contains('Add Expense').click();\n// Verify that the Travel expense is added\ncy.contains('Transactions').should('exist');\ncy.contains('Hotel Stay').should('exist');\ncy.contains('1500').should('exist');\n// Add Entertainment Expense\ncy.contains('+ Add Expense').click();\ncy.get('input[name=\"title\"]').type('Concert');\ncy.get('input[name=\"price\"]').type('500');\ncy.get('select[name=\"category\"]').select('Entertainment');\ncy.get('input[name=\"date\"]').type('2024-12-21');\ncy.get('button[type=\"submit\"]').contains('Add Expense').click();\n// Verify that the Entertainment expense is added and the updated balance\ncy.contains('Transactions').should('exist');\ncy.contains('Concert').should('exist');\ncy.contains('500').should('exist');\ncy.contains('Wallet Balance').parent().contains('3000'); // Adjust based on initial state",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Expense' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Expense' but never did.\n    at Context.eval (webpack://expense_tracker/./cypress/e2e/spec.cy.js:130:7)",
+                "diff": null
+              },
+              "uuid": "028e337e-0d7e-47a2-a40f-b5e55cd8b463",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Displays added food, travel, and entertainment expenses in the transaction list",
+              "fullTitle": "Expense Tracker Tests Displays added food, travel, and entertainment expenses in the transaction list",
+              "timedOut": null,
+              "duration": 4620,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Add Food Expense\ncy.contains('+ Add Expense').click();\ncy.get('input[name=\"title\"]').type('Brunch');\ncy.get('input[name=\"price\"]').type('400');\ncy.get('select[name=\"category\"]').select('Food');\ncy.get('input[name=\"date\"]').type('2024-12-18');\ncy.get('button[type=\"submit\"]').contains('Add Expense').click();\n// Verify that the Food expense is added\ncy.contains('Transactions').should('exist');\ncy.contains('Brunch').should('exist');\ncy.contains('400').should('exist');\n// Add Travel Expense\ncy.contains('+ Add Expense').click();\ncy.get('input[name=\"title\"]').type('Train Ticket');\ncy.get('input[name=\"price\"]').type('1000');\ncy.get('select[name=\"category\"]').select('Travel');\ncy.get('input[name=\"date\"]').type('2024-12-19');\ncy.get('button[type=\"submit\"]').contains('Add Expense').click();\n// Verify that the Travel expense is added\ncy.contains('Transactions').should('exist');\ncy.contains('Train Ticket').should('exist');\ncy.contains('1000').should('exist');\n// Add Entertainment Expense\ncy.contains('+ Add Expense').click();\ncy.get('input[name=\"title\"]').type('Movie Night');\ncy.get('input[name=\"price\"]').type('600');\ncy.get('select[name=\"category\"]').select('Entertainment');\ncy.get('input[name=\"date\"]').type('2024-12-20');\ncy.get('button[type=\"submit\"]').contains('Add Expense').click();\n// Verify that the Entertainment expense is added and the updated balance\ncy.contains('Transactions').should('exist');\ncy.contains('Movie Night').should('exist');\ncy.contains('600').should('exist');\ncy.contains('Wallet Balance').parent().contains('3000'); // Adjust based on initial state",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Expense' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Expense' but never did.\n    at Context.eval (webpack://expense_tracker/./cypress/e2e/spec.cy.js:159:7)",
+                "diff": null
+              },
+              "uuid": "4e8b8268-339c-435b-b2ed-4d9932c70a52",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Persists data in localStorage",
+              "fullTitle": "Expense Tracker Tests Persists data in localStorage",
+              "timedOut": null,
+              "duration": 4585,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Add a transaction\ncy.contains('+ Add Expense').click();\ncy.get('input[name=\"title\"]').type('Gym'); // Correcting input name for consistency\ncy.get('input[name=\"price\"]').type('1000'); // Corrected input name for price\ncy.get('select[name=\"category\"]').select('Entertainment');\ncy.get('input[name=\"date\"]').type('2024-12-20'); // Adding the missing date input\ncy.get('button[type=\"submit\"]').contains('Add Expense').click();\n// Ensure data is persisted in localStorage\ncy.window().then(win => {\n  const localStorageData = win.localStorage.getItem('expenses'); // Assuming data is saved in 'expenses'\n  expect(localStorageData).to.not.be.null; // Ensure something is stored\n  const expenses = JSON.parse(localStorageData);\n  expect(expenses).to.have.length.greaterThan(0); // Ensure that there's at least one expense saved\n});\n// Reload the page\ncy.reload();\n// Check if data persists\ncy.contains('Gym').should('exist');\ncy.contains('1000').should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Expense' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '+ Add Expense' but never did.\n    at Context.eval (webpack://expense_tracker/./cypress/e2e/spec.cy.js:201:7)",
+                "diff": null
+              },
+              "uuid": "0d6886cb-032f-4542-893d-5805584a6131",
+              "parentUUID": "0be1803e-e517-41d4-9626-2dba0225905a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fe10a5f3-0da2-4ebf-b455-8a15ba902bd3",
+            "3fa4cf05-4766-4f66-af2d-cddc17e02335"
+          ],
+          "failures": [
+            "5d2f1f7b-38f2-4171-adc2-cde8b53eae90",
+            "e9c52579-f158-4816-ab45-58547f590616",
+            "6edd91b7-4fc8-4ab6-8fa1-c2604875a238",
+            "f0e7b1eb-4f96-4586-a712-69e532024bb5",
+            "89d40426-4f95-4e80-afa7-2bfbdcb4f557",
+            "c979aee7-38b3-49bb-be7d-45e22f19eff5",
+            "b8eef137-b733-4697-bdb5-361eb87d8dc9",
+            "028e337e-0d7e-47a2-a40f-b5e55cd8b463",
+            "4e8b8268-339c-435b-b2ed-4d9932c70a52",
+            "0d6886cb-032f-4542-893d-5805584a6131"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 52973,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

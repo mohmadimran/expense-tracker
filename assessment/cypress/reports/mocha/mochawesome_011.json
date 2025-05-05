@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-01-22T19:24:45.349Z",
+    "end": "2025-01-22T19:24:45.925Z",
+    "duration": 576,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "ff6c1cb8-70a8-4595-b412-db1b09b7ed6f",
+      "title": "",
+      "fullFile": "cypress/e2e/spec.cy.js",
+      "file": "cypress/e2e/spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6e20398c-3647-4413-8457-b8cf5c78674b",
+          "title": "Expense Tracker Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should load the home page correctly",
+              "fullTitle": "Expense Tracker Tests should load the home page correctly",
+              "timedOut": null,
+              "duration": 470,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Expense Tracker');\ncy.get('h1').should('have.text', 'Expense Tracker');",
+              "err": {
+                "message": "Error: An error was thrown while processing a network event: A fixture file could not be found at any of the following paths:\n\n    > cypress/fixtures/expenses.json\n    > cypress/fixtures/expenses.json.[ext]\n\nCypress looked for these file extensions at the provided path:\n\n    > .json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\n\nProvide a path to an existing fixture file.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Expense Tracker Tests`",
+                "estack": "Error: An error was thrown while processing a network event: A fixture file could not be found at any of the following paths:\n\n    > cypress/fixtures/expenses.json\n    > cypress/fixtures/expenses.json.[ext]\n\nCypress looked for these file extensions at the provided path:\n\n    > .json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\n\nProvide a path to an existing fixture file.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Expense Tracker Tests`\n    at Object.<anonymous> (<embedded>:2771:115826)\n    at Object.tryCatcher (/home/crio-user/.cache/Cypress/13.17.0/Cypress/resources/app/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/home/crio-user/.cache/Cypress/13.17.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:512:31)\n    at Promise._settlePromise (/home/crio-user/.cache/Cypress/13.17.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:569:18)\n    at Promise._settlePromise0 (/home/crio-user/.cache/Cypress/13.17.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/home/crio-user/.cache/Cypress/13.17.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:694:18)\n    at Promise._fulfill (/home/crio-user/.cache/Cypress/13.17.0/Cypress/resources/app/node_modules/bluebird/js/release/promise.js:638:18)\n    at <unknown> (/home/crio-user/.cache/Cypress/13.17.0/Cypress/resources/app/node_modules/bluebird/js/release/nodeback.js:42:21)\n    at s (<embedded>:227:106085)\n    at T.<anonymous> (<embedded>:2771:105530)\n    at T.emit (node:events:514:28)\n    at T._finish (<embedded>:2771:106397)\n    at i (<embedded>:2771:105793)\n    at T._processSimple2 (<embedded>:2771:111554)\n    at <unknown> (<embedded>:2771:111407)\n    at T._stat2 (<embedded>:2771:112472)\n    at <unknown> (<embedded>:2771:112319)\n    at s (<embedded>:846:24236)\n    at s (<embedded>:227:106085)\n    at r (<embedded>:3031:13485)\n    at FSReqCallback.oncomplete (node:fs:210:21)",
+                "diff": null
+              },
+              "uuid": "fb583a6f-c487-4ebd-a3e9-d2de6a4bb9d8",
+              "parentUUID": "6e20398c-3647-4413-8457-b8cf5c78674b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display wallet balance and expenses cards",
+              "fullTitle": "Expense Tracker Tests should display wallet balance and expenses cards",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Wallet Balance').should('exist');\ncy.contains('Expenses').should('exist');",
+              "err": {},
+              "uuid": "7761f6a7-e701-4817-be1e-8367d2a927d4",
+              "parentUUID": "6e20398c-3647-4413-8457-b8cf5c78674b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should add and display an expense",
+              "fullTitle": "Expense Tracker Tests should add and display an expense",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.addExpense('Dinner', '500', 'Food', '2024-12-18');\ncy.contains('Dinner').should('exist');\ncy.contains('500').should('exist');",
+              "err": {},
+              "uuid": "61d52809-83f0-47e0-a78e-2d940b4a5af7",
+              "parentUUID": "6e20398c-3647-4413-8457-b8cf5c78674b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should handle invalid inputs gracefully",
+              "fullTitle": "Expense Tracker Tests should handle invalid inputs gracefully",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('+ Add Expense').click();\ncy.get('input[name=\"title\"]').clear(); // Leave title empty\ncy.get('button[type=\"submit\"]').contains('Add Expense').should('be.disabled');",
+              "err": {},
+              "uuid": "baf7d2af-d7e9-4006-8a1e-1659274d807b",
+              "parentUUID": "6e20398c-3647-4413-8457-b8cf5c78674b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should adapt layout for mobile view",
+              "fullTitle": "Expense Tracker Tests should adapt layout for mobile view",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-6');\ncy.get('.header').should('be.visible');\ncy.get('.wallet-balance').should('be.visible');\ncy.get('[data-cy=\"add-expense-btn\"]').should('be.visible');",
+              "err": {},
+              "uuid": "64031922-8549-424f-bd14-b86e55594a44",
+              "parentUUID": "6e20398c-3647-4413-8457-b8cf5c78674b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Persists data in localStorage",
+              "fullTitle": "Expense Tracker Tests Persists data in localStorage",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Add a transaction\ncy.addExpense('Gym', '1000', 'Entertainment', '2024-12-20');\n// Ensure data is persisted in localStorage\ncy.window().then(win => {\n  const localStorageData = win.localStorage.getItem('expenses');\n  expect(localStorageData).to.not.be.null;\n  const expenses = JSON.parse(localStorageData);\n  expect(expenses).to.deep.include({\n    title: 'Gym',\n    price: 1000,\n    category: 'Entertainment',\n    date: '2024-12-20'\n  });\n});\n// Reload the page\ncy.reload();\n// Check if data persists\ncy.contains('Gym').should('exist');\ncy.contains('1000').should('exist');",
+              "err": {},
+              "uuid": "bb1ce260-d09b-4ba3-ab0c-5431b582abe4",
+              "parentUUID": "6e20398c-3647-4413-8457-b8cf5c78674b",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "fb583a6f-c487-4ebd-a3e9-d2de6a4bb9d8"
+          ],
+          "pending": [],
+          "skipped": [
+            "7761f6a7-e701-4817-be1e-8367d2a927d4",
+            "61d52809-83f0-47e0-a78e-2d940b4a5af7",
+            "baf7d2af-d7e9-4006-8a1e-1659274d807b",
+            "64031922-8549-424f-bd14-b86e55594a44",
+            "bb1ce260-d09b-4ba3-ab0c-5431b582abe4"
+          ],
+          "duration": 470,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
